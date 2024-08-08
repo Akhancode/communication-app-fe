@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { usePathname } from "next/navigation";
-import { APP_NAME } from "@/constants/constants/constant";
+import { APP_NAME } from "@/lib/constants/constant";
 import { useState } from "react";
 import SplashScreen from "../components/SplashScreen";
 
@@ -26,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <main className="flex h-screen w-full bg-white dark:bg-gray-900 justify-center items-center text-blue-600" >
         {isLoading && isHome ? <h1>{<SplashScreen finishLoading={()=>setIsLoading(false)}/>}</h1> : <>{children}</>}
+      </main>
       </body>
     </html>
   );

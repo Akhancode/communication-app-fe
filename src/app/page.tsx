@@ -1,17 +1,23 @@
-
+"use client";
 import Image from "next/image";
-import { APP_NAME } from "../constants/constants/constant";
+
+import { APP_NAME } from "../lib/constants/constant";
+import { redirectTo } from "@/lib/helpers/redirectTo";
+import { useRouter } from "next/navigation";
+import { ROUTES } from "@/lib/constants/routes";
+import Button_1 from "@/components/common/button";
 
 export default function Home() {
+  const router = useRouter();
+  const handleClickButton = ()=>{
+    router.push(ROUTES.HOME)
+  }
   return (
-    <main className="bg-gray-900">
-      <div className="flex h-screen w-full bg-white dark:bg-gray-900 justify-center items-center text-blue-600">
-      <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-1 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-      <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-    {APP_NAME}
-</span>
-      </button>
+    
+      <div >
+
+<Button_1 content={APP_NAME} onClick={handleClickButton} />
       </div>
-    </main>
+ 
   );
 }
