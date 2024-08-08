@@ -26,9 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <main className="flex h-screen w-full bg-white dark:bg-gray-900 justify-center items-center text-blue-600" >
-        {isLoading && isHome ? <h1>{<SplashScreen finishLoading={()=>setIsLoading(false)}/>}</h1> : <>{children}</>}
-      </main>
+        <main className="flex  h-screen  bg-gray-900 justify-center items-center text-neutral-200">
+          {isLoading && isHome ? (
+            <h1>
+              {<SplashScreen finishLoading={() => setIsLoading(false)} />}
+            </h1>
+          ) : (
+            <>
+              <div className="min-w-[500px]">{children}</div>
+            </>
+          )}
+        </main>
       </body>
     </html>
   );

@@ -5,19 +5,19 @@ import { APP_NAME } from "../lib/constants/constant";
 import { redirectTo } from "@/lib/helpers/redirectTo";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@/lib/constants/routes";
-import Button_1 from "@/components/common/button";
+import Button_1 from "@/components/common/Button";
 
 export default function Home() {
   const router = useRouter();
-  const handleClickButton = ()=>{
-    router.push(ROUTES.HOME)
-  }
+  const handleClickButton = () => {
+    router.push(ROUTES.HOME);
+  };
+  const checkIsMobile = () => {
+    return;
+  };
   return (
-    
-      <div >
-
-<Button_1 content={APP_NAME} onClick={handleClickButton} />
-      </div>
- 
+    <div className='flex justify-center items-center min-w-full  min-h-screen bg-slate-800' >
+      <Button_1 content={APP_NAME} onClick={handleClickButton} />
+    </div>
   );
 }
