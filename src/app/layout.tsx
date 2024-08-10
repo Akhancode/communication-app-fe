@@ -33,7 +33,7 @@ export default function RootLayout({
             </h1>
           ) : (
             <>
-              <div className="min-w-[500px]">{children}</div>
+              <div className="min-w-[400px] ">{children}</div>
             </>
           )}
         </main>
