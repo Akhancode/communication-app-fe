@@ -12,9 +12,7 @@ export default function Home() {
   const handleClickButton = () => {
     router.push(ROUTES.HOME);
   };
-  const checkIsMobile = () => {
-    return;
-  };
+
   return (
     <div className='flex justify-center items-center min-w-full  min-h-screen bg-slate-800' >
       <Button_1 content={APP_NAME} onClick={handleClickButton} />

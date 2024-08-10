@@ -31,7 +31,7 @@ const ProfileCircle: React.FC<ProfileCircleProps> = ({
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center">
-          <span className="font-light font-sans text-4xl">
+          <span className="font-light font-sans text-4xl select-none">
             {String(userName)[0].toUpperCase()}
           </span>
         </div>
